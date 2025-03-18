@@ -70,20 +70,18 @@ fun LemonadeApp() {
                 .clickable {
                     when (currentStep) {
                         1 -> {
-                            // Vai para a etapa de espremer o limão
                             currentStep = 2
                             requiredSqueezes = (2..4).random()
                             squeezeCount = 0
                         }
                         2 -> {
-                            // Conta quantas vezes o limão foi espremido
                             squeezeCount++
                             if (squeezeCount >= requiredSqueezes) {
                                 currentStep = 3
                             }
                         }
-                        3 -> currentStep = 4 // Bebe a limonada
-                        4 -> currentStep = 1 // Reinicia o ciclo
+                        3 -> currentStep = 4
+                        4 -> currentStep = 1
                     }
                 }
         )
